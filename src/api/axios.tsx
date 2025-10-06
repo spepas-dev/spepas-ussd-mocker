@@ -2,13 +2,13 @@ import axios from 'axios';
 
 // const isDev = import.meta.env.DEV;
 // const proxyBase = import.meta.env.VITE_PROXY_BASE_URL; // “api”
-const liveBase = import.meta.env.VITE_API_URL; // “https://api…/gateway/v1”
+// const liveBase = import.meta.env.VITE_API_URL; // “https://api…/gateway/v1”
 
 // const baseURL = isDev
-//   ? `/${proxyBase}` // → “/api”
+// ? `/${proxyBase}` // → “/api”
 //   : liveBase; // → remote gateway
 
-const baseURL = liveBase;
+const baseURL = 'https://ussd.spepas.com/spussd/api/v1';
 
 export const apiClient = axios.create({
   baseURL,
