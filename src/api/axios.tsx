@@ -1,12 +1,14 @@
 import axios from 'axios';
 
-const isDev = import.meta.env.DEV;
-const proxyBase = import.meta.env.VITE_PROXY_BASE_URL; // “api”
+// const isDev = import.meta.env.DEV;
+// const proxyBase = import.meta.env.VITE_PROXY_BASE_URL; // “api”
 const liveBase = import.meta.env.VITE_API_URL; // “https://api…/gateway/v1”
 
-const baseURL = isDev
-  ? `/${proxyBase}` // → “/api”
-  : liveBase; // → remote gateway
+// const baseURL = isDev
+//   ? `/${proxyBase}` // → “/api”
+//   : liveBase; // → remote gateway
+
+const baseURL = liveBase;
 
 export const apiClient = axios.create({
   baseURL,
